@@ -1,7 +1,11 @@
 import React from "react";
-
+import TheNavigation from "../components/TheNavigation";
 const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <div>
+      <TheNavigation />
+    </div>
+  );
 };
 
 export default HomePage;
