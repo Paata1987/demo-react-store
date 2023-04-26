@@ -1,22 +1,38 @@
-import React from "react";
-import { Container, Navbar, NavLink } from "react-bootstrap";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom';
 
-const TheNavigation = () => {
+
+function BasicExample() {
   return (
-    <div>
+   
+      <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
-        <Navbar className="bg-light">
-          <Container>
-            <NavLink>women's clothing</NavLink>
-            <NavLink>men's clothing</NavLink>
-            <NavLink>Jewelry</NavLink>
-            <NavLink>electronics</NavLink>
-            <NavLink>About</NavLink>
-          </Container>
-        </Navbar>
+        <Navbar.Brand >React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={Link} to="/src/pages/HomePage.jsx"  >Home</Nav.Link>
+            <Nav.Link as={Link} to="/src/pages/AboutUs.jsx" >About</Nav.Link>
+            <Nav.Link as={Link} to="/src/pages/LoginPage.jsx" >Login</Nav.Link>
+            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown.Item >women's clothing</NavDropdown.Item>
+              <NavDropdown.Item >men's clothing</NavDropdown.Item>
+              <NavDropdown.Item >Jewelry</NavDropdown.Item>
+        
+              
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
       </Container>
-    </div>
+    </Navbar>
+  
+    
   );
-};
+}
 
-export default TheNavigation;
+export default BasicExample;
+
+
