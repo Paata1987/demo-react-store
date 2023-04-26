@@ -15,7 +15,7 @@ function BasicExample() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/src/pages/HomePage.jsx"  >Home</Nav.Link>
-            <Nav.Link as={Link} to="/src/pages/AboutUs.jsx" >About</Nav.Link>
+            <Nav.Link as={Link} to="/about" >About</Nav.Link>
             <Nav.Link as={Link} to="/src/pages/LoginPage.jsx" >Login</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item >women's clothing</NavDropdown.Item>
