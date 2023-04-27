@@ -9,6 +9,7 @@ function BasicExample() {
   return (
    
       <Navbar bg="dark" variant="dark" expand="lg">
+        
       <Container>
         <Navbar.Brand >React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
