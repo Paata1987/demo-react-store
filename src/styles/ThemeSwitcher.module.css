@@ -1,5 +1,7 @@
 .checkbox {
+    display: flex;
+    flex-direction: column;
     position: fixed;
-    top: 50px;
-    right: 20px;
+    top: 100px;
+    right: 0px;
 }

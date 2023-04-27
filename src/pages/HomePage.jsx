@@ -1,14 +1,15 @@
 import React from "react";
-import  TheNavigation  from "../components/TheNavigation";
+import { Container } from "react-bootstrap";
+
 
 const HomePage = () => {
   return (
     <>
-     <TheNavigation />
-    <div className="container">
+    
+    <Container className="">
 
 
-    </div>
+    </Container>
     </>
    
   );

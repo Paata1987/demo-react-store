@@ -10,8 +10,9 @@
 
 .dark-theme {
   --background-color: #1f1f1f;
-  --text-color: #fff;
+  --text-color: #f4f4f4;
 }
+
 
 body {
   background-color: var(--background-color);
