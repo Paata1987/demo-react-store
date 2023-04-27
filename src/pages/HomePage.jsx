@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <>
      <TheNavigation />
-    <div className="container text-light">
+    <div className="container">
 
 
     </div>

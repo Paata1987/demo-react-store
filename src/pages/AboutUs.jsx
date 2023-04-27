@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
-
+import TheNavigation from  '../components/TheNavigation'
 export default function AboutUs() {
   const carouselItems = [
     {
@@ -22,7 +22,8 @@ export default function AboutUs() {
 
   return (
     <div>
-      <Container className="py-5 bg-dark text-white">
+      <TheNavigation />
+      <Container className="py-5 ">
         <Row className="justify-content-center">
           <Col xs={12} md={8}>
             <h2 className="text-center mb-4">About Us</h2>
