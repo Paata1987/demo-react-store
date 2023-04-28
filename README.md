@@ -32,7 +32,7 @@ To run this project locally, you can follow these steps:
 
 ## Usage
 
-Visit our website at ___________________ to browse our products and make purchases. If you have any questions or concerns, please contact us at support@ambermart.com.
+Visit our website at ___________________ to browse our products and make purchases. If you have any questions or concerns, please contact us at ________________.com
 
 ## Contributing
 
