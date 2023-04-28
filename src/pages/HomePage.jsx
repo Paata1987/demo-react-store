@@ -1,17 +1,14 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-
+import TheCarousel from "../components/TheCarousel";
 
 const HomePage = () => {
   return (
     <>
-    
-    <Container className="">
-
-
-    </Container>
+      <Container className="">
+        <TheCarousel />
+      </Container>
     </>
-   
   );
 };
 

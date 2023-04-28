@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "../styles/theme.css";
 import styles from "../styles/ThemeSwitcher.module.css";
 
 import BootstrapSwitchButton from "bootstrap-switch-button-react";
 
 const ThemeSwitcher = ({ isDarkMode, onThemeChange }) => {
-  //  const [isDarkMode, setIsDarkMode] = useState(false);
-
   useEffect(() => {
     const body = document.body;
     if (isDarkMode) {
@@ -17,11 +15,6 @@ const ThemeSwitcher = ({ isDarkMode, onThemeChange }) => {
       body.classList.remove("dark-theme");
     }
   }, [isDarkMode]);
-
-  /* const handleThemeChange = async () => {
-    setIsDarkMode(!isDarkMode);
-    console.log(isDarkMode);
-  }; */
 
   return (
     <div className={styles.checkbox}>

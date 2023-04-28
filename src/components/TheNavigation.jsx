@@ -7,14 +7,7 @@ import { Link } from "react-router-dom";
 
 function BasicExample({ isDarkMode }) {
   return (
-    <Navbar
-      variant="litgh"
-      expand="lg"
-      sticky="top"
-      bg={`${isDarkMode ? "dark" : "light"}`}
-      vaariant={`${isDarkMode ? "dark" : "light"}`}
-      className={`${styles.custom__navigation_dark}`}
-    >
+    <Navbar expand="lg" sticky="top" variant={isDarkMode ? "dark" : "light"}>
       <Container className={styles.custom__navigation_dark}>
         <Navbar.Brand> Ambermart </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

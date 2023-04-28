@@ -1,0 +1,15 @@
+.carousel {
+    display: flex;
+    max-height: 400px;
+
+    opacity: 0.8;
+}
+
+.carouselItem {
+    background-image: linear-gradient(rgb(8, 8, 8), rgb(69, 69, 69));
+}
+
+.img {
+    height: 400px;
+    max-width: 60%;
+}
