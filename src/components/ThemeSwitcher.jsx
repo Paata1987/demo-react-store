@@ -25,6 +25,7 @@ const ThemeSwitcher = ({ isDarkMode, onThemeChange }) => {
         checked={!isDarkMode}
         onChange={onThemeChange}
         size="sm"
+        onstyle={isDarkMode ? "light" : "dark"}
       />
     </div>
   );

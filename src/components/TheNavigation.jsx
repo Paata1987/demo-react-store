@@ -2,13 +2,18 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import styles from "../styles/TheNavigation.module.css";
+
 import { Link } from "react-router-dom";
 
 function BasicExample({ isDarkMode }) {
   return (
-    <Navbar expand="lg" sticky="top" variant={isDarkMode ? "dark" : "light"}>
-      <Container className={styles.custom__navigation_dark}>
+    <Navbar
+      expand="lg"
+      sticky="top"
+      className={isDarkMode ? "bg-dark  " : "bg-light "}
+      variant={isDarkMode ? "dark  " : "light "}
+    >
+      <Container>
         <Navbar.Brand> Ambermart </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

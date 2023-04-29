@@ -1,4 +1,12 @@
-.custom__navigation_dark {
+.customBlack {
+
+    opacity: 1;
     z-index: 1;
 
+}
+
+.customLight {
+
+    opacity: 1;
+    z-index: 1;
 }
