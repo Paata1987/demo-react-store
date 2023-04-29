@@ -1,20 +1,24 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+
 import { Carousel, Col, Row } from "react-bootstrap";
 import styles from "../styles/TheCarousel.module.css";
+import { fetchProducts } from "../service/api";
+
 const TheCarousel = () => {
   const [cards, setCards] = useState([]);
   const [randomCards, setRandomCards] = useState([]);
 
   useEffect(() => {
-    axios.get("https://fakestoreapi.com/products").then((response) => {
-      setCards(response.data);
-      const randomIndexes = getRandomIndexes(response.data.length, 10);
-      const randomCards = response.data.filter((card, index) =>
+    const getProducts = async () => {
+      const data = await fetchProducts();
+      setCards(data);
+      const randomIndexes = getRandomIndexes(data.length, 10);
+      const randomCards = data.filter((card, index) =>
         randomIndexes.includes(index)
       );
       setRandomCards(randomCards);
-    });
+    };
+    getProducts();
   }, []);
 
   const getRandomIndexes = (max, count) => {
