@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 import { Carousel, Col, Row } from "react-bootstrap";
 import styles from "../styles/TheCarousel.module.css";
 import { fetchProducts } from "../service/api";
@@ -12,13 +11,15 @@ const TheCarousel = () => {
     const getProducts = async () => {
       const data = await fetchProducts();
       setCards(data);
-      const randomIndexes = getRandomIndexes(data.length, 10);
-      const randomCards = data.filter((card, index) =>
+      const randomIndexes = getRandomIndexes(data.length, 8);
+      const randomCards = data.filter((_card, index) =>
         randomIndexes.includes(index)
       );
+      console.log("cards =>", cards);
       setRandomCards(randomCards);
     };
     getProducts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getRandomIndexes = (max, count) => {
