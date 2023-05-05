@@ -3,12 +3,14 @@ import { Container } from "react-bootstrap";
 import TheCarousel from "../components/TheCarousel";
 import Products from "../components/Products";
 
-const HomePage = () => {
+const HomePage = (props) => {
+  const { isDarkMode } = props;
+  console.log("js=>", isDarkMode);
   return (
     <>
       <Container className="">
         <TheCarousel />
-        <Products />
+        <Products isDarkMode={isDarkMode} />
       </Container>
     </>
   );

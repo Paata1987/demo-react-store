@@ -12,9 +12,10 @@ import TheNavigation from "./components/TheNavigation";
 function App() {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
-
+  console.log("isdarkm App.js => ", isDarkMode);
   const handleThemeChange = () => {
     setIsDarkMode(!isDarkMode);
+
   };
   return (
     <>
@@ -22,9 +23,9 @@ function App() {
       <ThemeSwitcher isDarkMode={isDarkMode} onThemeChange={handleThemeChange} />
 
       <Routes>
-        <Route path="/" element={<HomePage />}></Route>
-        <Route path="/login" element={<LoginPage />}></Route>
-        <Route path="/about" element={<AboutUs />}></Route>
+        <Route path="/" element={<HomePage isDarkMode={isDarkMode} />}></Route>
+        <Route path="/login" element={<LoginPage isDarkMode={isDarkMode} />}></Route>
+        <Route path="/about" element={<AboutUs isDarkMode={isDarkMode} />}></Route>
       </Routes>
     </>
   );
