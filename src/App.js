@@ -12,7 +12,7 @@ import TheNavigation from "./components/TheNavigation";
 function App() {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
-  console.log("isdarkm App.js => ", isDarkMode);
+
   const handleThemeChange = () => {
     setIsDarkMode(!isDarkMode);
 

@@ -5,9 +5,14 @@ import Form from "react-bootstrap/Form";
 import styles from "../styles/LoginPage.module.css";
 
 function BasicExample(props) {
+  const { isDarkMode } = props;
   return (
     <>
-      <Card className={styles.login}>
+      <Card
+        className={`${styles.login} ${
+          isDarkMode ? "bg-secondary" : "bg-light"
+        }`}
+      >
         <Card.Img
           variant="top"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Mclb0NdAfReSwkqWDtxIh2Oc4vEyPMYzeg&usqp=CAU"
