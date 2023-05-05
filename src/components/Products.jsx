@@ -10,8 +10,8 @@ const Products = (props) => {
     const getProducts = async () => {
       const productData = await fetchProducts();
       setProducts(productData);
-      console.log("vot: ", isDarkMode);
     };
+
     getProducts();
   }, []);
   return (

@@ -5,7 +5,7 @@ import Products from "../components/Products";
 
 const HomePage = (props) => {
   const { isDarkMode } = props;
-  console.log("js=>", isDarkMode);
+
   return (
     <>
       <Container className="">

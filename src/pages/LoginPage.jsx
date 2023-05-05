@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import styles from "../styles/LoginPage.module.css";
 
-function BasicExample() {
+function BasicExample(props) {
   return (
     <>
       <Card className={styles.login}>

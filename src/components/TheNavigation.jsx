@@ -17,7 +17,6 @@ const TheNavigation = ({ isDarkMode }) => {
       setCategory(catoegories);
     };
     getAllCategories();
-    // console.log(category);
   }, []);
 
   return (
