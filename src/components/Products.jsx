@@ -14,6 +14,7 @@ const Products = (props) => {
 
     getProducts();
   }, []);
+
   return (
     <div className="container">
       <div className="row ">
@@ -26,6 +27,7 @@ const Products = (props) => {
               title={product.title}
               price={product.price}
               rate={product.rating.rate}
+              description={product.description}
             />
           );
         })}
