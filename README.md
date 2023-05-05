@@ -19,7 +19,7 @@ Ambermart is an online store that offers a wide range of products, including clo
 - Node.js
 - MongoDB
 - Express.js
-- Stripe API
+
 
 ## Installation
 
