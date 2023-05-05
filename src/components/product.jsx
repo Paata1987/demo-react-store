@@ -5,18 +5,18 @@ import styles from "../styles/Product.module.css";
 const Product = (props) => {
   const { img, title, description, price, rate } = props;
   return (
-    <div className="m-2 col">
+    <div className="mt-2 col-6 col-md-4 col-lg-3 d-flex">
       <Card className={styles.card}>
-        <Card.Img variant="top" src={img} />
+        <div className={styles.img}>
+          <Card.Img className={styles.src} src={img} alt={title} />
+        </div>
         <Card.Body>
           <Card.Title>{title} </Card.Title>
           <Card.Text>{description}</Card.Text>
-          <Card.Footer className="text-muted">
-            {" "}
-            <strong>Peice</strong>: {price} <p>Rate: {rate} </p>
-          </Card.Footer>
-          <Button variant="primary" className="m-2">
-            {" "}
+          <strong>Price</strong>: {price} <p>Rate: {rate}</p>
+        </Card.Body>
+        <Card.Footer className={styles.footer}>
+          <Button className={styles.button}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -28,7 +28,7 @@ const Product = (props) => {
               <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
             </svg>
           </Button>
-        </Card.Body>
+        </Card.Footer>
       </Card>
     </div>
   );

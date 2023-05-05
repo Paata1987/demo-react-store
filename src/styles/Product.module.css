@@ -1,4 +1,28 @@
 .card {
     width: 18rem;
+}
 
+.img {
+    margin: 10px;
+    position: relative;
+    padding-bottom: 100%;
+}
+
+.src {
+    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+}
+
+.button {
+    background: #ff8323;
+    width: 100%;
 }
