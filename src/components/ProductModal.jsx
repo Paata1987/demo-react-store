@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Modal, Row, Col, Image } from "react-bootstrap";
+import { Button, Modal, Row, Col, Image, ModalBody } from "react-bootstrap";
 
 const ProductModal = (props) => {
   const {
@@ -27,22 +27,24 @@ const ProductModal = (props) => {
         >
           <Modal.Title>{title}</Modal.Title>
         </Modal.Header>
-        <Row className={isDarkMode ? "bg-dark" : "bg-ligth"}>
-          <Col>
-            <Image xs={6} md={4} src={img} className="m-5 col-8" rounded />
-          </Col>
-          <Col>
-            <Modal.Body>
-              <div>description: {description}</div>
-              <div className="m-3">
-                <p>
-                  <strong>price: {price} $ </strong>
-                  rate: {rate}
-                </p>
-              </div>
-            </Modal.Body>
-          </Col>
-        </Row>
+        <ModalBody className={isDarkMode ? "bg-dark" : "bg-ligth"}>
+          <Row className={isDarkMode ? "bg-dark" : "bg-ligth"}>
+            <Col className="d-flex align-items-center  justify-content-center">
+              <Image src={img} className="m-5   col-10" rounded />
+            </Col>
+            <Col className="d-flex align-items-center  justify-content-center">
+              <Modal.Body>
+                <div>description: {description}</div>
+                <div className="m-3">
+                  <p>
+                    <strong>price: {price} $ </strong>
+                    rate: {rate}
+                  </p>
+                </div>
+              </Modal.Body>
+            </Col>
+          </Row>
+        </ModalBody>
         <Modal.Footer className={isDarkMode ? "bg-dark" : "bg-ligth"}>
           <Button variant="secondary" onClick={handleClose}>
             Close

@@ -7,6 +7,8 @@
     margin: 10px;
     position: relative;
     padding-bottom: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .src {
@@ -21,10 +23,13 @@
 
 .footer {
     bottom: 0;
+    border: none;
+    align-self: center;
     width: 100%;
 }
 
 .button {
-    background: #ff8323;
+    background: #1f6a8a;
+
     width: 100%;
 }
