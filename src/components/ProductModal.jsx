@@ -2,7 +2,16 @@ import React from "react";
 import { Button, Modal, Row, Col, Image } from "react-bootstrap";
 
 const ProductModal = (props) => {
-  const { title, description, price, rate, showModal, onHide, img } = props;
+  const {
+    title,
+    description,
+    price,
+    rate,
+    showModal,
+    onHide,
+    img,
+    isDarkMode,
+  } = props;
 
   const handleClose = () => {
     onHide();
@@ -11,10 +20,14 @@ const ProductModal = (props) => {
   return (
     <>
       <Modal show={showModal} onHide={handleClose}>
-        <Modal.Header closeButton>
+        {" "}
+        <Modal.Header
+          closeButton
+          className={isDarkMode ? "bg-dark" : "bg-ligth"}
+        >
           <Modal.Title>{title}</Modal.Title>
         </Modal.Header>
-        <Row>
+        <Row className={isDarkMode ? "bg-dark" : "bg-ligth"}>
           <Col>
             <Image xs={6} md={4} src={img} className="m-5 col-8" rounded />
           </Col>
@@ -30,8 +43,7 @@ const ProductModal = (props) => {
             </Modal.Body>
           </Col>
         </Row>
-
-        <Modal.Footer>
+        <Modal.Footer className={isDarkMode ? "bg-dark" : "bg-ligth"}>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
