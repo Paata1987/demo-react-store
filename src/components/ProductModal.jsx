@@ -16,14 +16,17 @@ const ProductModal = (props) => {
         </Modal.Header>
         <Row>
           <Col>
-            <Image xs={6} md={4} src={img} className="col-4" rounded />
+            <Image xs={6} md={4} src={img} className="m-5 col-8" rounded />
           </Col>
           <Col>
             <Modal.Body>
               <div>description: {description}</div>
-              <p>
-                price: {price} rate: {rate}
-              </p>
+              <div className="m-3">
+                <p>
+                  <strong>price: {price} $ </strong>
+                  rate: {rate}
+                </p>
+              </div>
             </Modal.Body>
           </Col>
         </Row>
