@@ -4,6 +4,7 @@ import Card from "react-bootstrap/Card";
 import styles from "../styles/Product.module.css";
 import ProductModal from "./ProductModal";
 import { useState } from "react";
+
 const Product = (props) => {
   const { img, title, description, price, rate } = props;
   const { isDarkMode } = props;
@@ -24,20 +25,31 @@ const Product = (props) => {
         description={description}
         price={price}
         rate={rate}
+        img={img}
+        isDarkMode={isDarkMode}
       />
 
-      <div className="mt-2 25 col-6 col-md-4 col-lg-3 d-flex">
+      <div className="mt-2  col-6 col-md-4 col-lg-3 d-flex">
+        {" "}
         <Card
           onClick={handleShow}
-          className={`${styles.card} ${isDarkMode ? "bg-dark" : "bg-light"}`}
+          className={`${styles.card} ${
+            isDarkMode ? "bg-secondary" : "bg-light"
+          }`}
         >
           <div className={styles.img}>
             <Card.Img className={styles.src} src={img} alt={title} />
           </div>
           <Card.Body>
-            <Card.Title as="h5">{title} </Card.Title>
-            <Card.Text>{description}</Card.Text>
-            <strong>Price</strong>: {price} <p>Rate: {rate}</p>
+            <Card.Title as="h5">{title.substring(0, 15)} </Card.Title>
+            <div
+              className={`me-2 d-inline-block  text-truncate ${styles.description}`}
+            >
+              {description}
+            </div>
+            <div className="d-flex justify-content-center  mt-3 ">
+              <strong>Price</strong>: <strong> {price} $</strong>
+            </div>
           </Card.Body>
           <Card.Footer className={styles.footer}>
             <Button className={styles.button} onClick={handleAdd}>
