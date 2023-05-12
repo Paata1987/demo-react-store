@@ -34,7 +34,7 @@ const ProductModal = (props) => {
             </Col>
             <Col
               style={{ textAlign: "justify" }}
-              className="d-flex align-items-center align-text-justify"
+              className="d-flex align-itms-center align-text-justify"
             >
               <Modal.Body>
                 <div> &nbsp; description: {description}</div>

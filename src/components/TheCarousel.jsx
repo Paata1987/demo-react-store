@@ -2,20 +2,22 @@ import { useEffect, useState } from "react";
 import { Carousel, Col, Row } from "react-bootstrap";
 import styles from "../styles/TheCarousel.module.css";
 import { fetchProducts } from "../service/api";
+import ProductModal from "./ProductModal";
 
 const TheCarousel = () => {
-  const [cards, setCards] = useState([]);
   const [randomCards, setRandomCards] = useState([]);
+  const [show, setShow] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
     const getProducts = async () => {
       const data = await fetchProducts();
-      setCards(data);
+
       const randomIndexes = getRandomIndexes(data.length, 8);
       const randomCards = data.filter((_card, index) =>
         randomIndexes.includes(index)
       );
-      console.log("cards =>", cards);
+
       setRandomCards(randomCards);
     };
     getProducts();
@@ -30,6 +32,16 @@ const TheCarousel = () => {
     return Array.from(indexes);
   };
 
+  const handleClose = () => {
+    setShow(false);
+    setSelectedProduct(null);
+  };
+
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
+    setShow(true);
+    //console.log("Product =>", product);
+  };
   return (
     <>
       <Carousel className={styles.carousel}>
@@ -44,9 +56,11 @@ const TheCarousel = () => {
                   </p>
                 </Carousel.Caption>
               </Col>
+
               <Col>
                 <div className={styles.center}>
                   <img
+                    onClick={() => handleProductClick(card)}
                     src={card.image}
                     className={` ${styles.img} flex-md-column   `}
                     alt={card.title}
@@ -57,6 +71,17 @@ const TheCarousel = () => {
           </Carousel.Item>
         ))}
       </Carousel>
+      {selectedProduct && (
+        <ProductModal
+          onHide={handleClose}
+          showModal={show}
+          title={selectedProduct.title}
+          description={selectedProduct.description}
+          price={selectedProduct.price}
+          rate={selectedProduct.rate}
+          img={selectedProduct.image}
+        />
+      )}
     </>
   );
 };
