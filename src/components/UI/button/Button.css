@@ -13,6 +13,35 @@
     background-color: #1ea7fd;
 }
 
+
+
+.storybook-button--danger {
+    color: white;
+    background-color: #fc0000;
+}
+
+
+.storybook-button--warning {
+    color: white;
+    background-color: #f400bb;
+}
+
+
+.storybook-button--info {
+    color: rgb(47, 180, 237);
+    background-color: #1ea7fd;
+}
+
+
+.storybook-button--success {
+    color: rgb(33, 33, 33);
+    background-color: #54f00b;
+}
+
+
+
+
+
 .storybook-button--secondary {
     color: #333;
     background-color: transparent;

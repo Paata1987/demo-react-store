@@ -8,6 +8,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+
 };
 
 
@@ -19,6 +20,19 @@ export const Primary = {
 };
 
 export const Secondary = {
+    args: {
+        label: 'Button',
+    },
+};
+
+export const Success = {
+    args: {
+        success: true,
+        label: 'Button',
+    },
+};
+
+export const Danger = {
     args: {
         label: 'Button',
     },
