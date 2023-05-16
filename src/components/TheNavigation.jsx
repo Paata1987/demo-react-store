@@ -19,6 +19,11 @@ const TheNavigation = ({ isDarkMode }) => {
     getAllCategories();
   }, []);
 
+  const categoryHandler = (e) => {
+    //
+    console.log("event => ", e.target.innerHTML);
+  };
+
   return (
     <>
       <Navbar
@@ -44,6 +49,7 @@ const TheNavigation = ({ isDarkMode }) => {
               <NavDropdown title="Products" id="navbarScrollingDropdown">
                 {category.sort().map((categoryName, idx) => (
                   <NavDropdown.Item
+                    onClick={categoryHandler}
                     className={isDarkMode ? "bg-dark text-light" : "bg-light"}
                     key={idx + 2}
                   >
